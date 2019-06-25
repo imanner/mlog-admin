@@ -103,6 +103,19 @@ export const constantRoutes = [
         meta: { title: 'Guide', icon: 'guide', noCache: true }
       }
     ]
+  },
+  {
+    path: '/tag',
+    component: Layout,
+    redirect: '/tag/index',
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/tag/index'),
+        name: 'Guide',
+        meta: { title: '标签', icon: 'guide', noCache: true }
+      }
+    ]
   }
 ]
 
